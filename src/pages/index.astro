@@ -1,0 +1,45 @@
+---
+	import BaseHead from '../components/BaseHead.astro';
+	import Header from '../components/Header.astro';
+	import Footer from '../components/Footer.astro';
+	import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+</head>
+<style>
+	.html,
+	.body {
+		height: 100%;
+	}
+
+	.main_container {
+		/* height: calc(100% - 154px); */
+		min-height: 750px;
+	}
+
+	p {
+		color: var(--text);
+	}
+</style>
+
+<body>
+	<Header />
+	<main class="main_container">
+		<div class="flex justify-center">
+			<img src="/public/space.webp" alt="" width="300" height="259">
+		</div>
+		<h1 class="text-8xl font-600"> Hello, my name is Yeyeye</h1>
+		<p>
+			I am a Developer who is currently based in ShangHai.
+		</p>
+
+	</main>
+	<Footer />
+</body>
+
+</html>
